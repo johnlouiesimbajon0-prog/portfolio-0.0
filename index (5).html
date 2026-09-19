@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO | John Louie Simbajon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Spider-Man Background Overlay -->
+    <div class="web-bg"></div>
+
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="main-title">PORTFOLIO</h1>
+            
+            <div class="profile-card fade-in">
+                <div class="profile-frame">
+                    <a href="profile.jpg" target="_blank">
+                        <img src="profile.jpg" alt="John Louie Profile" class="profile-pic">
+                    </a>
+                </div>
+                <h2>John Louie Simbajon</h2>
+                <p class="course">(BSIT Student)</p>
+            </div>
+        </header>
+
+        <!-- Intro & Toggle -->
+        <div class="intro-section fade-in">
+            <h3>Want to know more about me?</h3>
+        <div>
+            <button id="toggleBtn" class="btn">View Personal Info</button>
+        </div>
+            <div>
+          <a href="#about" class="arrow-btn">↓</a>
+            </div>
+
+        <!-- Hidden Info -->
+        <div id="infoSection" style="display: none;">
+            <div class="card info-card fade-in">
+                <div class="info-line">
+                    <div>📍 San Carlos City</div>
+                    <div>📞 09*******886</div>
+                    <div>🎂 May 07, 2007</div>
+                    <div>♂️ Male</div>
+                    <div>♥️ Taken</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About -->
+        <div id="about" class="card fade-in">
+            <h3>🕸️ ABOUT ME</h3>
+            <p>I am a dedicated BSIT student passionate about technology, web design, and development. I love creating clean, beautiful, and functional designs.</p>
+            <p style="margin-top:12px;">🎯 Goal: Build user-friendly websites & solve problems with clean code.</p>
+        </div>
+
+        <!-- Ambition -->
+        <div class="card ambition-card fade-in">
+            <h3>🚀 AMBITION IN LIFE</h3>
+            <p>I want to graduate in college to continue my journey for being a future billionaire 😎</p>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="card fade-in">
+            <h3>💡 SOFT SKILLS</h3>
+            <p class="skills-text">Communication • Teamwork • Adaptability<br>Problem Solving </p>
+        </div>
+
+        <!-- Projects -->
+        <div class="card fade-in">
+            <h3>📂 MY PROJECTS</h3>
+            <div style="text-align:center;">
+                <p>🌐 Personal Portfolio — <strong>HTML & CSS</strong></p>
+
+            </div>
+        </div>
+
+        <!-- Hobbies -->
+        <div class="card hobbies-card fade-in">
+            <h3>🎮 MY HOBBIES</h3>
+            <div class="hobby-items">
+                <div class="hobby">🎮 Video Games</div>
+                <div class="hobby">🏐 Playing Volleyball</div>
+                <div class="hobby">🎸 Playing Guitar</div>
+            </div>
+        </div>
+
+        <!-- Tech & Contact -->
+        <div class="card fade-in">
+            <h3>💻 SKILLS / TECHNOLOGIES</h3>
+            <p class="skills-text">HTML • CSS • C++ • Responsive Web Design</p>
+        </div>
+
+        <p class="contact-info">
+            <a href="mailto:johnlouiesimabjon0@email.com" class="contact-link">📧 johnlouiesimabjon0@email.com</a><br>
+            <a href="https://github.com/johnlouie-dev" target="_blank" class="contact-link">🔗 github.com/johnlouie-dev</a>
+        </p>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 John Louie Simbajon | Built with ❤ HTML & CSS</p>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle Info
+        const info = document.getElementById('infoSection');
+        const btn = document.getElementById('toggleBtn');
+        btn.addEventListener('click', () => {
+            const isHidden = info.style.display === 'none';
+            info.style.display = isHidden ? 'block' : 'none';
+            btn.textContent = isHidden ? 'Hide Personal Info' : 'View Personal Info';
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({behavior: 'smooth'});
+            });
+        });
+    </script>
+</body>
+</html>
